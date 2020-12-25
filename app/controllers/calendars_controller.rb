@@ -14,9 +14,9 @@ class CalendarsController < ApplicationController
   end
 
   private
-
+  # Issue4  require(:calenders)→require(:plan)に修正
   def plan_params
-    params.require(:calendars).permit(:date, :plan)
+    params.require(:plan).permit(:date, :plan)
   end
     # 命名規則の修正getWeek→get_week
   def get_week
